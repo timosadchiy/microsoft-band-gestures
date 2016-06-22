@@ -1,4 +1,4 @@
-package com.timosadchiy.microsoftbandgestures;
+package com.osacci.microsoftbandgestures;
 
 public interface IntentionLockEventListener {
 

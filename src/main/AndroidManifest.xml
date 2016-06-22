@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.timosadchiy.microsoftbandgestures">
+    package="com.osacci.microsoftbandgestures">
 
     <application
         android:allowBackup="true"

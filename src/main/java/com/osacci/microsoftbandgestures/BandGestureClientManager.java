@@ -1,4 +1,4 @@
-package com.timosadchiy.microsoftbandgestures;
+package com.osacci.microsoftbandgestures;
 
 import com.microsoft.band.BandIOException;
 import com.microsoft.band.sensors.BandSensorManager;

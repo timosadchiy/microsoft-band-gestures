@@ -1,4 +1,4 @@
-package com.timosadchiy.microsoftbandgestures;
+package com.osacci.microsoftbandgestures;
 
 public class ThreeDimensional implements Cloneable {
     private float x;
