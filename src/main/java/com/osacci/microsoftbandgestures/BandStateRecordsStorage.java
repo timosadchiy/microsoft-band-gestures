@@ -1,6 +1,9 @@
 package com.osacci.microsoftbandgestures;
 
+import android.util.Log;
+
 import java.util.ArrayList;
+import java.util.ConcurrentModificationException;
 import java.util.Date;
 import java.util.List;
 
@@ -26,12 +29,16 @@ public class BandStateRecordsStorage {
                         continue;
                     }
                     List<BandStateRecord> toRemove = new ArrayList<BandStateRecord>();
-                    for (BandStateRecord record : records) {
-                        if (record.getExpired()) {
-                            toRemove.add(record);
-                        } else {
-                            break;
+                    try {
+                        for (BandStateRecord record : records) {
+                            if (record.getExpired()) {
+                                toRemove.add(record);
+                            } else {
+                                break;
+                            }
                         }
+                    } catch (ConcurrentModificationException e) {
+                        Log.e("BandStateRecordsStorage", e.toString());
                     }
                     for (BandStateRecord record : toRemove) {
                         records.remove(record);
